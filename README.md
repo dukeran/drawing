@@ -2,7 +2,7 @@
 
 It's simple to use, simply drop into the drawing directory and run $ ruby program.rb. You'll be given instructions and a prompt to continue from there. No need to install anything!
 
-<h3>The following are commands for the program:<h3>
+<h3>The following are commands for the program:</h3>
 
 Command 		Description
 C w h           Should create a new canvas of width w and height h.
