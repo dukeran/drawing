@@ -61,7 +61,7 @@ __Sample I/O__
       |     xoooooooooooooo|
       ----------------------
 
-enter command: Q
+      enter command: Q to quit
 
 
 
