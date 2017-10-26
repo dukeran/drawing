@@ -12,10 +12,10 @@ Command 		Description
 <strong>R x1 y1 x2 y2 </strong> --- Should create a new rectangle, whose upper left corner is (x1,y1) and
                 lower right corner is (x2,y2). Horizontal and vertical lines will be drawn
                 using the 'x' character.<br><br>
-<strong>B x y c    </strong    --- Should fill the entire area connected to (x,y) with "colour" c. The
+<strong>B x y c    </strong>   --- Should fill the entire area connected to (x,y) with "colour" c. The
                 behaviour of this is the same as that of the "bucket fill" tool in paint
                 programs.<br><br>
-<strong>Q  </strong    ---         Should quit the program.<br>
+<strong>Q  </strong>    ---         Should quit the program.<br>
 
 __Sample I/O__
 
