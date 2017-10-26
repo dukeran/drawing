@@ -1,9 +1,6 @@
 # 2d array of elements representing a Cartesian plane
-
-# It's just loops and element index commands
-
+# It's loops and element index commands
 # Have a drawing loop that renders the matrix based upon the population of each element
-
 # And the drawing commands just change the state of the matrix elements
 
 
@@ -49,7 +46,7 @@ def ask question
   	  board = Board.new(reply[1], reply[2])
       board.create_board(board)
     else
-      puts "Sorry but you must initialize the board"
+      puts "Sorry but you must initialize the board, please terminate and start again"
     end
     while true
     puts question
@@ -79,10 +76,14 @@ def ask question
       y1 = reply[2]
       x2 = reply[3]
       y2 = reply[4]
+      z = reply[2]
       while x1 <= x2
         board.grid[y1][x1] = "x"
         board.grid[y2][x1] = "x"
         x1 = x1 +1
+        while z > y2
+          z = z+1
+        end
       end
       x2 = reply[3]
       y2 = reply[4]
@@ -93,13 +94,48 @@ def ask question
       end
       board.create_board(board)
     elsif reply[0] == "B"
-      board.grid.map do |array|
-        next if array.include? 'x'
-        y = 0
-        while y < array.count
-          array[y] = 'x'
-          y = y + 1
+      o = reply[3]
+      reply = reply.map(&:to_i)
+      x = reply[1]
+      y = reply[2]
+      unless board.grid.transpose[x].include?('x') && board.grid[y].include?('x')
+        board.grid.map do |arr|
+          y = arr.count - 1
+          next if arr.include? '-'
+          while y > 0
+            break if arr[y] == 'x'
+
+            unless arr[y] == "|"
+              arr[y] = o
+            end
+            y = y - 1
+          end
         end
+        sideways = board.grid.transpose
+        sideways.map do |arr|
+          z = 0
+          next if arr.include? "|"
+          while z < arr.count
+            break if arr[z] == 'x'
+            unless arr[z] == "-"
+              arr[z] = o
+            end
+            z = z + 1
+          end
+          y = arr.count - 1
+          next if arr.include? "|"
+          next if arr.include? o
+          while y > 0
+            break if arr[y] == 'x'
+            unless arr[y] == "-"
+              arr[y] = o
+            end
+            y = y - 1
+          end
+        end
+      end
+      unless sideways == nil
+        board.grid = sideways.transpose
       end
       board.create_board(board)
     elsif reply[0] == "Q"
