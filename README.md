@@ -1,8 +1,8 @@
-##Welcome to the beta-canvas!
+<h2>Welcome to the beta-canvas!</h2>
 
 It's simple to use, simply drop into the drawing directory and run $ ruby program.rb. You'll be given instructions and a prompt to continue from there. No need to install anything!
 
-###The following are commands for the program:
+<h3>The following are commands for the program:<h3>
 
 Command 		Description
 C w h           Should create a new canvas of width w and height h.
@@ -19,47 +19,47 @@ Q               Should quit the program.
 
 __Sample I/O__
 
-###Below is a sample run of the program. User input is prefixed with enter command:
+<h3>Below is a sample run of the program. User input is prefixed with enter command:</h3>
 
-enter command: C 20 4
-----------------------
-|                    |
-|                    |
-|                    |
-|                    |
-----------------------
+      enter command: C 20 4
+      ----------------------
+      |                    |
+      |                    |
+      |                    |
+      |                    |
+      ----------------------
 
-enter command: L 1 2 6 2
-----------------------
-|                    |
-|xxxxxx              |
-|                    |
-|                    |
-----------------------
+      enter command: L 1 2 6 2
+      ----------------------
+      |                    |
+      |xxxxxx              |
+      |                    |
+      |                    |
+      ----------------------
 
-enter command: L 6 3 6 4
-----------------------
-|                    |
-|xxxxxx              |
-|     x              |
-|     x              |
-----------------------
+      enter command: L 6 3 6 4
+      ----------------------
+      |                    |
+      |xxxxxx              |
+      |     x              |
+      |     x              |
+      ----------------------
 
-enter command: R 14 1 18 3
-----------------------
-|             xxxxx  |
-|xxxxxx       x   x  |
-|     x       xxxxx  |
-|     x              |
-----------------------
+      enter command: R 14 1 18 3
+      ----------------------
+      |             xxxxx  |
+      |xxxxxx       x   x  |
+      |     x       xxxxx  |
+      |     x              |
+      ----------------------
 
-enter command: B 10 3 o
-----------------------
-|oooooooooooooxxxxxoo|
-|xxxxxxooooooox   xoo|
-|     xoooooooxxxxxoo|
-|     xoooooooooooooo|
-----------------------
+      enter command: B 10 3 o
+      ----------------------
+      |oooooooooooooxxxxxoo|
+      |xxxxxxooooooox   xoo|
+      |     xoooooooxxxxxoo|
+      |     xoooooooooooooo|
+      ----------------------
 
 enter command: Q
 
@@ -67,5 +67,5 @@ enter command: Q
 
  * * *
 
-#####This was written by Kerrie Durham and it is version 1.0.0 at 017-10-26 06:45:49 -0400
+<h4>This was written by Kerrie Durham and it is version 1.0.0 at 017-10-26 06:45:49 -0400</h4>
 
