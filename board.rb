@@ -3,7 +3,6 @@
 # Have a drawing loop that renders the matrix based upon the population of each element
 # And the drawing commands just change the state of the matrix elements
 
-
 class Board
   attr_accessor :grid
 
@@ -15,35 +14,15 @@ class Board
       r[x-1] = "|"
     end
     #sets the horizontal borders
-		@grid[0].map! { |y| y = "-" }
+    @grid[0].map! { |y| y = "-" }
     @grid[y+1].map! { |y| y = "-" }
-	end
+  end
 
-  def create_board(board)
+  def display_board(board)
     #formats display of board
     board.grid.each do |r|
       puts r.each { |p| p }.join("")
     end
   end
-
-  def horizontal?(reply)
-    reply[0] == 'L' && reply.map(&:to_i)[2] == reply.map(&:to_i)[4]
-    reply = reply.map(&:to_i)
-  end
-
-  def vertical?(reply)
-    reply[0] == 'L' && reply.map(&:to_i)[2] == reply.map(&:to_i)[4]
-    reply = reply.map(&:to_i)
-  end
-
-  def rectangle?(reply)
-    reply[0] == "R"
-    reply = reply.map(&:to_i)
-  end
-
-  def bucket?(reply)
-    reply[0] == "B"
-  end
 end
-
 
